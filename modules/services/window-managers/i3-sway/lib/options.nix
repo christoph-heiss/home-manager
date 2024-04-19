@@ -333,7 +333,7 @@ let
       };
 
       childBorder = mkOption {
-        type = types.str;
+        type = types.nullOr types.str;
         visible = false;
       };
 
@@ -348,7 +348,7 @@ let
       };
 
       indicator = mkOption {
-        type = types.str;
+        type = types.nullOr types.str;
         visible = false;
       };
     };

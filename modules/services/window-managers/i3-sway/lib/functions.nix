@@ -32,13 +32,9 @@ rec {
       keycodebindings);
 
   colorSetStr = c:
-    concatStringsSep " " [
-      c.border
-      c.background
-      c.text
-      c.indicator
-      c.childBorder
-    ];
+    assert c.childBorder != null -> c.indicator != null;
+    concatStringsSep " " ([ c.border c.background c.text ]
+      ++ (lib.optional [ c.indicator ]) ++ (lib.optional [ c.childBorder ]));
   barColorSetStr = c: concatStringsSep " " [ c.border c.background c.text ];
 
   modeStr = bindkeysToCode: name: keybindings: ''
