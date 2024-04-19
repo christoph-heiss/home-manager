@@ -654,6 +654,21 @@ in {
           '';
         };
 
+        focusedTabTitle = mkOption {
+          type = colorSetModule;
+          default = {
+            border = "#333333";
+            background = "#5f676a";
+            text = "#ffffff";
+          };
+          description = ''
+            A view that has focused descendant container. Tab or stack container
+            title that is the parent of the focused container but is not
+            directly focused. Defaults to focused_inactive if not specified and
+            does not use the indicator and child_border colors.
+          '';
+        };
+
         unfocused = mkOption {
           type = colorSetModule;
           default = {

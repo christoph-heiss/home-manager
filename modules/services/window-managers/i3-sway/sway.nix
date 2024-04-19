@@ -287,6 +287,7 @@ let
           }"
           "client.focused ${colorSetStr colors.focused}"
           "client.focused_inactive ${colorSetStr colors.focusedInactive}"
+          "client.focused_tab_title ${colorSetStr colors.focusedTabTitle}"
           "client.unfocused ${colorSetStr colors.unfocused}"
           "client.urgent ${colorSetStr colors.urgent}"
           "client.placeholder ${colorSetStr colors.placeholder}"
